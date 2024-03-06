@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pacientes</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/stylec.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Pacientes</h1>      
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>altura</th>
+                </tr>   
+            <thead>
+            <tbody> 
+                {% for paciente in pacientes %}
+                    <tr>
+                        <td>{{ paciente.nombre }}</td>
+                        <td>{{ paciente.apellido }}</td>
+                        <td>{{ paciente.altura }}</td>
+                    </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </body>
+</html>
