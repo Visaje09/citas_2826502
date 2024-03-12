@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapos</title>
+</head>
+<body>
+    <h1> Nuevo medico </h1>
+    <form method="post" action="">
+        <p>Nombre: 
+            <input type="text" name="nombre" /> </p>
+        <p>Apellidos: 
+            <input type="text" name="apellidos" /> </p>
+        <p>Tipo Identificacion
+            <select name="ti">
+                <option>TI</option>
+                <option>CC</option>
+            </select>    
+        </p>
+        <p>Numero identificacion: 
+            <input type="text" name="ni" /> 
+        </p>    
+        <p>Registro Medico: 
+            <input type="text" name="rm" /> 
+        </p>
+        <p>
+            Especialidad: 
+            <select name = "es">
+                {%for especialidad in especialidades %}
+                    <option>{{ especialidad }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <button>
+            Guardar
+        </button>
+
+    </form>
+</body>
+</html>

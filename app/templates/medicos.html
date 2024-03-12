@@ -15,9 +15,11 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>nombre</th>
-                    <th>apellido</th>
-                    <th>especialidad</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Especialidad</th>
+                    <th>Detalles</th>
+                    
                 </tr>   
             <thead>
             <tbody> 
@@ -26,6 +28,10 @@
                         <td>{{ medico.nombre }}</td>
                         <td>{{ medico.apellido }}</td>
                         <td>{{ medico.especialidad }}</td>
+                        <td>
+                            <a href="/medicos/{{ medico.id }}">
+                                Ver detalles
+                        </td>
                     </tr>
                 {% endfor %}
                 
