@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Consul</title>
+</head>
+<body>
+    <h1> Nuevo medico </h1>
+    <form method="post" action="">
+        <p>Nombre: 
+            <input type="text" name="pnombre" /> </p>
+        <p>Apellidos: 
+            <input type="text" name="papellidos" /> </p>
+        <p>Tipo Identificacion
+            <select name="pti">
+                <option>TI</option>
+                <option>CC</option>
+            </select>    
+        </p>  
+        <p>Altura: 
+            <input type="Numero" name="paltura" /> 
+        </p>
+        <p>
+            Tipo de sangre: 
+            <select name = "es">
+                {%for sangre in sangre %}
+                    <option>{{ sangre }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <button>
+            Guardar
+        </button>
+
+    </form>
+</body>
+</html>
