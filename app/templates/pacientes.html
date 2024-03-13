@@ -19,6 +19,7 @@
                     <th>Apellido</th>
                     <th>Altura</th>
                     <th>Detalles</th>
+                    <th>Actualizar</th>
                 </tr>   
             <thead>
             <tbody> 
@@ -31,6 +32,13 @@
                             <a href="/pacientes/{{ paciente.id }}">
                                 Ver detalles
                         </td>
+                        <td>
+                        
+                            <a href="/pacientes/update/{{ paciente.id }}">
+                                Actualizar
+                            </a>  
+                           
+                        </td>    
                     </tr>
                 {% endfor %}
                 

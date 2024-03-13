@@ -23,9 +23,9 @@
         </p>
         <p>
             Tipo de sangre: 
-            <select name = "es">
-                {%for sangre in sangre %}
-                    <option>{{ sangre }}</option>
+            <select name="blood">
+                {%for s in sangre %}
+                    <option>{{ s }}</option>
                 {% endfor %}
             </select>
         </p>

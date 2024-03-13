@@ -18,7 +18,10 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Especialidad</th>
+                    <th>Tipo Identificacion</th>
+                    <th>Registro Medico</th>
                     <th>Detalles</th>
+                    <th>Actualizar</th>
                     
                 </tr>   
             <thead>
@@ -28,9 +31,22 @@
                         <td>{{ medico.nombre }}</td>
                         <td>{{ medico.apellido }}</td>
                         <td>{{ medico.especialidad }}</td>
+                        <td>{{ medico.tipo_identificacion }}</td>
+                        <td>{{ medico.registro_medico}} </td>
                         <td>
                             <a href="/medicos/{{ medico.id }}">
                                 Ver detalles
+                            </a>    
+                        </td>
+                        <td>
+                            <a href="/medicos/update/{{ medico.id }}">
+                                Actualizar
+                            </a>    
+                        </td>
+                        <td>
+                            <a href="/medicos/delete/{{ medico.id }}">
+                                Eliminar
+                            </a>    
                         </td>
                     </tr>
                 {% endfor %}
